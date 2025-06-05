@@ -91,6 +91,7 @@ const SocialsBlock: FC = () => (
     >
       <a
         href="https://X.com/KrishJainw/"
+        target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiX />
