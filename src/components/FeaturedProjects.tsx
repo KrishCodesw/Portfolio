@@ -1,5 +1,6 @@
 import { SiGithub } from "react-icons/si";
 import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 interface Project {
   id: number;
@@ -43,6 +44,31 @@ const projects: Project[] = [
       "A real-time,room-based chat server,made to enable scalable communication in chat rooms. ",
     tech: ["React", "Websockets", "Tailwind", "ExpressJS", "NodeJS"],
     githubUrl: "https://github.com/KrishCodesw/Room-based-ChatAPP",
+  },
+  {
+    id: 4,
+    title: "Paytm,with a twist",
+    description:
+      "A real-time,money transfer wallet,made to enable scalable transactions in the app itself. ",
+    tech: ["React", "Tailwind", "MongoDB", "Vercel", "ExpressJS", "NodeJS"],
+    githubUrl: "https://github.com/KrishCodesw/paytm-end-to-end",
+    liveUrl: "https://paytm-roan.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "VastuAI",
+    description:
+      "A Rule Engine that gives you Vastu suggestions for both Indian and Chinese Vastu according to the directions of rooms,objects etc. ",
+    tech: ["Python", "json"],
+    githubUrl: "https://github.com/KrishCodesw/vastuai",
+  },
+  {
+    id: 6,
+    title: "Auto Email AI AGENT",
+    description:
+      "A Rule Engine that gives you Vastu suggestions for both Indian and Chinese Vastu according to the directions of rooms,objects etc. ",
+    tech: ["Python", "json", "GCP", "Gemeni"],
+    githubUrl: "https://github.com/KrishCodesw/build-with-ai",
   },
 ];
 
@@ -101,6 +127,38 @@ export default function FeaturedProjects() {
             </div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="space-y-4"
+        >
+          <h2 className="text-3xl font-semibold tracking-tight bg-gradient-to-r bg-white bg-clip-text text-transparent">
+            Achievements & Events
+          </h2>
+          <ul className="text-lg text-zinc-400 leading-relaxed space-y-2">
+            <li className="list-none hover:text-white transition duration-200">
+              ► Participated in various tech ideathons, developer meets, and
+              events organized by Google and college.
+            </li>
+            <li className="list-none hover:text-white transition duration-200">
+              ► One of the Winners of{" "}
+              <span className="text-white font-semibold">
+                <strong>Datavision</strong>
+              </span>{" "}
+              — a 3 day Ideathon focused on data innovation.
+            </li>
+            <li className="list-none hover:text-white transition duration-200">
+              ► Authored (not-published) a research paper on{" "}
+              <span className=" font-medium">
+                Brain-Computer Interfaces (BCIs)
+              </span>
+              , exploring neural signal integration and future applications in
+              human-computer interaction.
+            </li>
+          </ul>
+        </motion.div>
       </div>
     </section>
   );

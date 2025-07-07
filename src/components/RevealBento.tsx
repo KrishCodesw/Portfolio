@@ -101,24 +101,105 @@ const SocialsBlock: FC = () => (
 );
 
 const AboutBlock = () => (
-  // Updated col-span to span 2 columns on medium and larger screens
-  <Block className="md:col-span-2 text-3xl leading-snug">
-    <section className="bg-black text-white py-20 px-6 sm:px-12 md:px-24 lg:px-48">
-      <div className="max-w-5xl mx-auto space-y-6">
-        <h2 className="text-4xl font-bold tracking-tight">About Me</h2>
-        <p className="text-lg text-zinc-400 leading-relaxed">
-          Hey! I'm Krish — a passionate developer who loves building sleek,
-          interactive digital experiences. I primarily work with technologies
-          like NextJS,React, Tailwind CSS, and Framer Motion for Frontend and on
-          Backend side tech like ExpressJS,NodeJS,PostgreSQL, .My goal is to
-          combine creativity and performance to deliver elegant and impactful
-          web applications.
-        </p>
-        <p className="text-lg text-zinc-400 leading-relaxed">
-          Outside of coding, I enjoy learning about design, exploring the world
-          of AI, and creating content to help others grow in tech. Let's build
-          something awesome together!
-        </p>
+  <Block className="md:col-span-2 text-3xl leading-snug relative overflow-hidden">
+    <div className="absolute -inset-1 blur-xl opacity-10 bg-gradient-to-r from-purple-600 via-pink-600 to-yellow-500 rounded-xl pointer-events-none z-0" />
+
+    <section className="relative z-10 bg-black text-white py-16 px-6 sm:px-12 md:px-24 lg:px-32">
+      <div className="max-w-5xl mx-auto space-y-14">
+        {/* EXPERIENCE */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="space-y-4"
+        >
+          <h2 className="text-3xl font-semibold tracking-tight text-gradient bg-gradient-to-r bg-white bg-clip-text text-transparent">
+            Experience
+          </h2>
+          <ul className="text-lg text-zinc-400 leading-relaxed space-y-2">
+            <li className="list-none hover:text-white transition duration-200">
+              ► Full Stack Developer at{" "}
+              <strong className="text-white">Aetheron.AI</strong> – Working on
+              AI-driven and full-stack solutions for the first product launch
+              <strong className="text-white"> Spaciefy.</strong>
+            </li>
+            <li className="list-none hover:text-white transition duration-200">
+              ► Full Stack Developer Intern at{" "}
+              <a
+                href="https://www.effilearn.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-white"
+              >
+                <strong className="text-white">Effilearn</strong>
+              </a>
+              – Built and enhanced a production-grade course selling application
+              .
+            </li>
+            <li className="list-none hover:text-white transition duration-200">
+              ► Personal Projects – Created full-stack apps with user
+              authentication, dashboards, voting systems, and more.
+            </li>
+          </ul>
+        </motion.div>
+
+        {/* ABOUT ME */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="space-y-4"
+        >
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r text-white bg-clip-text ">
+            About Me
+          </h2>
+          <p className="text-lg text-zinc-400 leading-relaxed hover:text-white transition duration-200">
+            ► I love everything about where the world of technology is going.
+            <br />► I don't have many hobbies outside coding. I am not athletic,
+            bad at singing, &nbsp;&nbsp;&nbsp;&nbsp;don't drink & can't dance.
+            <br />►{" "}
+            <span className="text-shadow-white font-semibold">
+              Building is the only thing I am good at.
+            </span>
+            <br />► At this point, I want to be a part of taking something from
+            0-1 or 1 - 100.
+            <br />► I just want to be heads down chasing that goal.
+          </p>
+        </motion.div>
+
+        {/* DESCRIPTION / PHILOSOPHY */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="space-y-4"
+        >
+          <h2 className="text-3xl font-semibold tracking-tight bg-gradient-to-rtext-white bg-clip-text ">
+            What Drives Me
+          </h2>
+          <p className="text-lg text-zinc-400 leading-relaxed hover:text-white transition duration-200">
+            I believe in building{" "}
+            <span className="text-white font-medium">meaningful products</span>{" "}
+            that improve lives — whether it’s simplifying user flows, optimizing
+            backend performance, or helping others learn.
+          </p>
+          <p className="text-lg text-zinc-400 leading-relaxed hover:text-white transition duration-200">
+            Outside of coding, I’m exploring{" "}
+            <span className="text-white font-medium">AI tools</span>, diving
+            into design systems, and sharing what I learn with the dev
+            community.
+          </p>
+          <p className="text-lg text-zinc-400 leading-relaxed hover:text-white transition duration-200">
+            Other than this I also participated in multiple Tech Ideathons ,
+            Events and even won one in my 1st semester Called Datavision
+            <span className="text-white font-medium">AI tools</span>, diving
+            into design systems, and sharing what I learn with the dev
+            community.
+          </p>
+        </motion.div>
       </div>
     </section>
   </Block>

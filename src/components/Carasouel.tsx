@@ -20,8 +20,6 @@ import {
   SiGithub,
   SiVercel,
   SiNetlify,
-  SiSass,
-  SiBootstrap,
 } from "react-icons/si";
 
 interface CardType {
@@ -38,8 +36,7 @@ const cards: CardType[] = [
   { id: 5, title: "React", icon: SiReact },
   { id: 6, title: "Next.js", icon: SiNextdotjs },
   { id: 7, title: "Tailwind CSS", icon: SiTailwindcss },
-  { id: 8, title: "Sass", icon: SiSass },
-  { id: 9, title: "Bootstrap", icon: SiBootstrap },
+
   { id: 10, title: "Node.js", icon: SiNodedotjs },
   { id: 11, title: "Express.js", icon: SiExpress },
   { id: 12, title: "MongoDB", icon: SiMongodb },
